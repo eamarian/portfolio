@@ -1,5 +1,5 @@
 import type { ProjectProps } from "@/components/Project/Project";
-import { Tag } from "../../utils/Tag";
+import { Tag } from "./Tag";
 import Image from "next/image";
 
 const projects: ProjectProps[] = [

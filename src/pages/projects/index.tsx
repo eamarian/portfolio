@@ -2,7 +2,7 @@ import styles from "@/styles/Projects.module.css";
 import Head from "next/head";
 import Project from "@/components/Project/Project";
 import { ProjectProps } from "@/components/Project/Project";
-import projects from "./projects";
+import projects from "../../utils/projects";
 import Navbar from "@/components/Navbar/Navbar";
 
 export default function Projects() {

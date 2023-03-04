@@ -7,7 +7,7 @@
 	padding: 0px 75px;
 	gap: 20px;
 
-	//border: solid;
+	/* border: solid; */
 }
 
 .navlinks {
@@ -17,13 +17,13 @@
 	flex-grow: 1;
 	gap: 50px;
 
-	//border: dotted;
+	/* border: dotted; */
 }
 
 .navitem {
 	text-align: left;
 	list-style: none;
-	//border: dashed;
+	/* border: dashed; */
 }
 
 .link {
@@ -34,6 +34,7 @@
 	letter-spacing: 0em;
 	text-decoration: none;
 	color: black;
+	border: solid;
 }
 
 .link:hover {
@@ -41,4 +42,5 @@
 }
 
 .logo {
+	display: flex;
 }

@@ -19,7 +19,7 @@
 .image {
 	z-index: -1;
 	opacity: 0.5;
-	objectfit: fill;
+	object-fit: fill;
 	border-radius: 30px;
 }
 
@@ -27,7 +27,4 @@
 	gap: 10px;
 	display: flex;
 	justify-content: center;
-}
-
-.tag {
 }

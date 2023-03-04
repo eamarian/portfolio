@@ -7,8 +7,10 @@ import styles from "../../styles/Navbar.module.css";
 export default function Navbar() {
 	return (
 		<nav className={styles.navbar}>
-			<Link className={styles.link} href="/">
-				Home
+			<Link className={styles.link} href="/" passHref legacyBehavior>
+				<a className={styles.logo}>
+					<Image src={logo} alt=""></Image>
+				</a>
 			</Link>
 			<ol className={styles.navlinks}>
 				<li className={styles.navitem}>

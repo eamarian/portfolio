@@ -17,17 +17,17 @@ export default function Navbar() {
 					</Link>
 				</li>
 				<li className={styles.navitem}>
-					<Link className={styles.link} href="/">
+					<Link className={styles.link} href="/about-me">
 						About Me
 					</Link>
 				</li>
 				<li className={styles.navitem}>
-					<Link className={styles.link} href="/">
+					<Link className={styles.link} href="/resume">
 						Resume
 					</Link>
 				</li>
 				<li className={styles.navitem}>
-					<Link className={styles.link} href="/">
+					<Link className={styles.link} href="/contact-me">
 						Contact Me
 					</Link>
 				</li>

@@ -8,9 +8,7 @@ export default function Navbar() {
 	return (
 		<nav className={styles.navbar}>
 			<Link className={styles.link} href="/" passHref legacyBehavior>
-				<a className={styles.logo}>
-					<Image src={logo} alt=""></Image>
-				</a>
+				<Image className={styles.logo} src={logo} alt=""></Image>
 			</Link>
 			<ol className={styles.navlinks}>
 				<li className={styles.navitem}>

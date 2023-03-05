@@ -10,5 +10,5 @@
 	gap: 10px;
 	flex-wrap: wrap;
 	/* flex-grow: 1; */
-	align-content: space-around;
+	justify-content: center;
 }

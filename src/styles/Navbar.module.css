@@ -41,6 +41,6 @@
 	text-decoration: underline;
 }
 
-.logo {
-	display: flex;
+.logo:hover {
+	cursor: pointer;
 }

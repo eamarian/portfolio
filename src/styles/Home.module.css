@@ -25,13 +25,13 @@
 }
 
 .column {
-	//border-style: solid;
+	/* border-style: solid; */
 	flex: 1 0px;
 }
 
-.column1 {
-	//background: rgba(74, 127, 254, 0.7);
-}
+/* .column1 {
+	background: rgba(74, 127, 254, 0.7);
+} */
 
 .column2 {
 	background: rgba(254, 127, 74, 0.7);

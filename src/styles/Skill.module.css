@@ -1,0 +1,30 @@
+.levels{
+    display: flex;
+    flex-direction: columns;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.bubble{
+    height: 18px;
+    width: 125px;
+    border: solid;
+    border-radius: 9px;
+    background: white;
+}
+
+.level:last-child{
+    text-align: right;
+}
+
+.level:only-child{
+    text-align: center;
+}
+
+.level:not(:last-child):not(:first-child) > p{
+    visibility: hidden;
+}
+
+.filled{
+    background: blue;
+}

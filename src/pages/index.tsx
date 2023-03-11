@@ -5,6 +5,7 @@ import { Tag } from "../utils/Tag";
 import Image from "next/image";
 import vercel from "../../public/vercel.svg";
 import Navbar from "@/components/Navbar/Navbar";
+import Skill, {SkillLevel} from "@/components/Skill/Skill";
 
 export default function Home() {
 	return (
@@ -16,28 +17,8 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Navbar></Navbar>
-			<main className={styles.main}>
-				<div className={styles.columns}>
-					<div className={`${styles.column} ${styles.column1}`}>
-						<div className={styles.title}>Greeting, Name.</div>
-						<div className={styles.text}>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
-							deserunt, repudiandae, doloremque vero hic excepturi sint possimus
-							aliquam provident reprehenderit porro amet, labore ipsam beatae
-							exercitationem. Velit corrupti ea vitae?
-						</div>
-						<button className={`${styles.primary} ${styles.solid}`}>
-							See my work
-						</button>
-						<button className={`${styles.primary} ${styles.hollow}`}>
-							my Resume
-						</button>
-					</div>
-					<div className={`${styles.column} ${styles.column2}`}>
-						<div className={styles.title}>Column 2</div>
-					</div>
-				</div>
-			</main>
+			<Skill name="Skill 1" level={SkillLevel.Low}></Skill>
+			<Skill name="Skill 2" level={SkillLevel.MediumHigh}></Skill>
 			<Project
 				title="Title"
 				description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat illo provident eligendi totam facere, fugit quas enim porro voluptatibus voluptates fuga ducimus sed dolorem aspernatur suscipit sunt dicta at rem."

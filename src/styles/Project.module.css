@@ -11,9 +11,8 @@
 	padding: 20px;
 }
 
-.project:hover {
-	opacity: 1;
-	transition: 0.3s;
+.project:hover .image {
+	filter: blur(0px);
 }
 
 .image {
@@ -21,7 +20,13 @@
 	opacity: 0.5;
 	object-fit: fill;
 	border-radius: 30px;
+	filter: blur(3px);
+	transition: 0.5s
 }
+
+/* .image:hover {
+	filter: blur(0px);
+} */
 
 .tags {
 	gap: 10px;

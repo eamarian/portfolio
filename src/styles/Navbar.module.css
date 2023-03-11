@@ -4,10 +4,13 @@
 	justify-content: space-between;
 	background: grey;
 	align-items: center;
-	padding: 0px 75px;
-	gap: 20px;
+	/* padding: 0px 20px; */
+	/* padding-left: 20px; */
+	/* gap: 20px; */
+	height: 10%;
+	width: 100%;
 
-	/* border: solid; */
+	border: solid;
 }
 
 .navlinks {
@@ -16,14 +19,20 @@
 	justify-content: flex-end;
 	flex-grow: 1;
 	gap: 50px;
+	/* column-gap: 50px; */
 
-	/* border: dotted; */
+	border: dotted;
 }
 
 .navitem {
-	text-align: left;
 	list-style: none;
-	/* border: dashed; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+	border: dashed;
 }
 
 .link {
@@ -34,7 +43,7 @@
 	letter-spacing: 0em;
 	text-decoration: none;
 	color: black;
-	border: solid;
+	/* border: solid; */
 }
 
 .link:hover {
@@ -43,4 +52,19 @@
 
 .logo:hover {
 	cursor: pointer;
+}
+
+.openbutton{
+	cursor: pointer;
+}
+
+.sidepanel{
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s;
+	display: flex;
+	flex-direction: column;
+	background: grey;
+	top: 0;
+	/* right: 0; */
 }

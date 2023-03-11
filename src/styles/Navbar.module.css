@@ -1,70 +1,70 @@
 .navbar {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	background: grey;
-	align-items: center;
-	/* padding: 0px 20px; */
-	/* padding-left: 20px; */
-	/* gap: 20px; */
-	height: 10%;
-	width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: grey;
+  align-items: center;
+  /* padding: 0px 20px; */
+  /* padding-left: 20px; */
+  /* gap: 20px; */
+  height: 10%;
+  width: 100%;
 
-	border: solid;
+  border: solid;
 }
 
 .navlinks {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	flex-grow: 1;
-	gap: 50px;
-	/* column-gap: 50px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-grow: 1;
+  gap: 50px;
+  /* column-gap: 50px; */
 
-	border: dotted;
+  border: dotted;
 }
 
 .navitem {
-	list-style: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	overflow-x: hidden;
-	overflow-y: hidden;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
-	border: dashed;
+  border: dashed;
 }
 
 .link {
-	font-family: Poppins;
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 27px;
-	letter-spacing: 0em;
-	text-decoration: none;
-	color: black;
-	/* border: solid; */
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-decoration: none;
+  color: black;
+  /* border: solid; */
 }
 
 .link:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .logo:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
-.openbutton{
-	cursor: pointer;
+.openbutton {
+  cursor: pointer;
 }
 
-.sidepanel{
-	z-index: 1;
-	overflow-x: hidden;
-	transition: 0.5s;
-	display: flex;
-	flex-direction: column;
-	background: grey;
-	top: 0;
-	/* right: 0; */
+.sidepanel {
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  background: grey;
+  top: 0;
+  /* right: 0; */
 }

@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
 body {
-	background: #fbe5d9;
-	font-family: "Poppins", sans-serif;
-	margin: 0px;
+  background: #fbe5d9;
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
 }
 
 button {
-	border-radius: 20px;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 24px;
+  border-radius: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
 }

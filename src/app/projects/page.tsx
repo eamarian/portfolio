@@ -6,14 +6,14 @@ import projects from "../../utils/projects";
 import Navbar from "@/components/Navbar/Navbar";
 
 export default function ProjectsPage() {
-	return (
-		<main>
-			<div className={styles.title}>Projects.</div>
-			<div className={styles.projects}>
-				{projects.map((projectProps: ProjectProps, i) => (
-					<Project {...projectProps} key={i}></Project>
-				))}
-			</div>
-		</main>
-	);
+  return (
+    <main>
+      <div className={styles.title}>Projects.</div>
+      <div className={styles.projects}>
+        {projects.map((projectProps: ProjectProps, i) => (
+          <Project {...projectProps} key={i}></Project>
+        ))}
+      </div>
+    </main>
+  );
 }

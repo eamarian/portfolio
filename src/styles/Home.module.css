@@ -1,32 +1,32 @@
 .main {
-	margin: 10% 10% 0%;
+  margin: 10% 10% 0%;
 }
 
 .title {
-	font-weight: bold;
-	font-size: 60px;
-	line-height: 72px;
-	color: #180017;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 72px;
+  color: #180017;
 }
 
 .text {
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
 
-	color: #180017;
+  color: #180017;
 }
 
 .columns {
-	display: flex;
-	justify-content: center;
-	gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .column {
-	/* border-style: solid; */
-	flex: 1 0px;
+  /* border-style: solid; */
+  flex: 1 0px;
 }
 
 /* .column1 {
@@ -34,26 +34,26 @@
 } */
 
 .column2 {
-	background: rgba(254, 127, 74, 0.7);
-	border-radius: 20px;
+  background: rgba(254, 127, 74, 0.7);
+  border-radius: 20px;
 }
 
 .primary {
-	--theme-color: rgba(4, 52, 90, 1);
+  --theme-color: rgba(4, 52, 90, 1);
 }
 
 .secondary {
-	--theme-color: rgba(199, 39, 63, 1);
+  --theme-color: rgba(199, 39, 63, 1);
 }
 
 .hollow {
-	box-sizing: border-box;
-	border: 3px solid rgba(4, 52, 90, 1);
-	background: inherit;
-	color: var(--theme-color);
+  box-sizing: border-box;
+  border: 3px solid rgba(4, 52, 90, 1);
+  background: inherit;
+  color: var(--theme-color);
 }
 
 .solid {
-	background: var(--theme-color);
-	color: rgba(255, 220, 198, 1);
+  background: var(--theme-color);
+  color: rgba(255, 220, 198, 1);
 }

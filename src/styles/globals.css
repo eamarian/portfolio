@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
-body {
-	background: #fbe5d9;
-	font-family: "Poppins", sans-serif;
-	margin: 0px;
+:root {
+  --background_primary: rgba(234, 231, 220, 1);
+  --background_secondary: rgba(216, 195, 165, 1);
 }
 
-button {
-	border-radius: 20px;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 24px;
+body {
+  background: var(--background_primary);
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
 }

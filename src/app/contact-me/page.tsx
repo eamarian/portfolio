@@ -1,5 +1,3 @@
-import { notFound } from "next/navigation";
-
-export default function ContactMePage() {
-	notFound();
+export default function TestPage() {
+  return <main>Contact Me</main>;
 }

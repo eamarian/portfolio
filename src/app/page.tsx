@@ -19,41 +19,23 @@ export default function Page() {
   const contactRef = useRef(null);
   const [contactIsVisible, setContactIsVisible] = useState<boolean>(false);
 
+  // Initialize Observation to detect section visibility
   const observedCallback: IntersectionObserverCallback = (entries) => {
     entries.forEach((entry) => {
-      //console.log("Target: ", entry.target);
-
-      //let message: string = "";
       switch (entry.target) {
         case homeRef.current:
           setHomeIsVisible(entry.isIntersecting);
-          //message = "Home: ";
           break;
         case aboutRef.current:
           setAboutIsVisible(entry.isIntersecting);
-          //message = "About: ";
           break;
         case projectsRef.current:
           setProjectsIsVisible(entry.isIntersecting);
-          //message = "Projects: ";
           break;
         case contactRef.current:
           setContactIsVisible(entry.isIntersecting);
-          //message = "Contact: ";
           break;
-        default:
-        //message = "Unknown: ";
       }
-
-      /** 
-      if (entry.isIntersecting) {
-        message += "TRUE";
-      } else {
-        message += "FALSE";
-      }
-
-      console.log(message);
-      */
     });
   };
 

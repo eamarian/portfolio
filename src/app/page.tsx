@@ -2,10 +2,17 @@
 
 import Hero from "../components/Hero.tsx";
 import Navbar from "../components/Navbar.tsx";
+import About from "../components/About.tsx";
+import Projects from "../components/Projects.tsx";
+import Contact from "../components/Contact.tsx";
+import Footer from "@/components/Footer.tsx";
 
 import { useEffect, useRef, useState } from "react";
 
 export default function Page() {
+  //const [canScroll, setCanScroll] = useState<boolean>(false);
+  const [canScroll, setCanScroll] = useState<boolean>(true); //always allow scrolling to save time in development
+
   // Initialize Section Refs
   const homeRef = useRef(null);
   const [homeIsVisible, setHomeIsVisible] = useState<boolean>(false);
@@ -70,89 +77,22 @@ export default function Page() {
   }, [aboutRef, projectsRef, contactRef]);
 
   return (
-    <div>
-      <Hero ref={homeRef} />
-      <Navbar
-        homeIsVisible={homeIsVisible}
-        aboutIsVisible={aboutIsVisible}
-        projectsIsVisible={projectsIsVisible}
-        contactIsVisible={contactIsVisible}
-      />
-      <section id="about" className="h-dvh" ref={aboutRef}>
-        <h1>About Me</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </section>
-      <section id="projects" className="h-dvh" ref={projectsRef}>
-        <h1>Projects</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </section>
-      <section id="contact" className="h-dvh" ref={contactRef}>
-        <h1>Contact Me</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </section>
+    <div className={`h-dvh ${canScroll ? "" : "overflow-hidden"}`}>
+      <div>
+        <Hero setCanScroll={setCanScroll} ref={homeRef} />
+        <Navbar
+          homeIsVisible={homeIsVisible}
+          aboutIsVisible={aboutIsVisible}
+          projectsIsVisible={projectsIsVisible}
+          contactIsVisible={contactIsVisible}
+        />
+        <div className="scroll-mt-[24px]">
+          <About ref={aboutRef} />
+          <Projects ref={projectsRef} />
+          <Contact ref={contactRef} />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }

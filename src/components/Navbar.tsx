@@ -5,7 +5,7 @@ interface NavbarProps {
   contactIsVisible: boolean;
 }
 
-export default function main(props: NavbarProps) {
+export default function NavBar(props: NavbarProps) {
   //const focusStyle = "hover:underline transition duration-1000";
   /*"hover:underline  hover:transition-all hover:duration-500 focus:underline focus:transition-all duration-500";*/
   const focusStyle = "underline";

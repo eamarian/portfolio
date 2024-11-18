@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
-import Project, { ProjectProps } from "./Project";
-import projects from "../app/projects.tsx";
+import Project, { ProjectProps } from "./Project.tsx";
+import projects from "./projectlist.tsx";
 
 const Projects = forwardRef<HTMLElement>((props, ref) => {
   return (

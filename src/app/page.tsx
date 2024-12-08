@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar.tsx";
 import About from "../components/About.tsx";
 import Projects from "../components/Project/Projects.tsx";
 import Contact from "../components/Contact.tsx";
-import Footer from "../components/Footer.tsx";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -90,7 +89,6 @@ export default function Page() {
           <About ref={aboutRef} />
           <Projects ref={projectsRef} />
           <Contact ref={contactRef} />
-          <Footer />
         </div>
       </div>
     </div>

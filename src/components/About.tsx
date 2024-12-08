@@ -2,8 +2,8 @@ import { forwardRef } from "react";
 
 const Contact = forwardRef<HTMLElement>((props, ref) => {
   return (
-    <section id="about" className="h-dvh scroll-mt-[inherit]" ref={ref}>
-      <h1>About Me</h1>
+    <section id="about" className="scroll-mt-[inherit]" ref={ref}>
+      <h1>About me.</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

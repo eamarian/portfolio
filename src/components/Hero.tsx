@@ -1,8 +1,16 @@
-import { forwardRef, MouseEventHandler } from "react";
+import {
+  forwardRef,
+  MouseEventHandler,
+  useRef,
+  useEffect,
+  RefObject,
+} from "react";
 
 interface HeroProps {
   setCanScroll: (canScroll: boolean) => void;
 }
+
+const fontSizeREM: number = 5; //TODO: Review this constant. This should probably be queried for instead...
 
 const titles: { title: string; colorClassName: string }[] = [
   { title: "Nature Lover", colorClassName: "text-green-500" },
@@ -13,12 +21,59 @@ const titles: { title: string; colorClassName: string }[] = [
   { title: "Software Developer", colorClassName: "text-blue-500" },
 ];
 
+const buildAnimation = (): {
+  keyframes: Keyframe[];
+  options: KeyframeAnimationOptions;
+} => {
+  const holdRatio: number = 3;
+
+  const offsetStep: number = 1 / ((holdRatio + 1) * titles.length);
+
+  const keyframes: Keyframe[] = new Array<Keyframe>(titles.length * 2 + 1);
+
+  let offset: number = 0;
+  let top: number = 0;
+  for (let i: number = 0; i < keyframes.length - 2; i += 2) {
+    keyframes[i] = { offset: offset, top: `${top}rem`, easing: "ease" }; //Transition
+    keyframes[i + 1] = {
+      offset: (offset += offsetStep * holdRatio),
+      top: `${top}rem`,
+      easing: "ease",
+    }; //Hold
+
+    offset += offsetStep;
+    top -= fontSizeREM;
+  }
+
+  keyframes[keyframes.length - 1] = { offset: 1, top: `${top}rem` };
+
+  return {
+    keyframes: keyframes,
+    options: {
+      duration: titles.length * 1500,
+      iterations: Infinity,
+    },
+  };
+};
+
+const animation: { keyframes: Keyframe[]; options: KeyframeAnimationOptions } =
+  buildAnimation();
+
 const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => {
   const onClick: MouseEventHandler<HTMLAnchorElement> = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent> // eslint-disable-line @typescript-eslint/no-unused-vars
   ) => {
     props.setCanScroll(true);
   };
+
+  const titlesRef: RefObject<HTMLSpanElement> = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (titlesRef.current) {
+      titlesRef.current.animate(animation.keyframes, animation.options);
+    }
+  }, []);
+
   return (
     <section
       id="home"
@@ -32,8 +87,10 @@ const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => {
           <br />
           <div className="line">
             <div className="static-text">{"I'm a "}</div>
-            <div className="rotate-text">
-              <span>
+            <div
+              className={`rotate-text overflow-hidden h-[5rem] h-[${fontSizeREM}rem]`}
+            >
+              <span className="relative uppercase" ref={titlesRef}>
                 {titles.map(({ title, colorClassName }, index) => {
                   return (
                     <span key={index} className={colorClassName}>
